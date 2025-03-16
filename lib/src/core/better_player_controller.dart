@@ -658,7 +658,7 @@ class BetterPlayerController {
         parameters: <String, dynamic>{_durationParameter: moment}));
 
     final Duration? currentDuration = videoPlayerController!.value.duration;
-    if (currentDuration == null) {
+    if (currentDuration == null || currentDuration == Duration.zero) {
       return;
     }
     if (moment > currentDuration) {
